@@ -131,7 +131,11 @@ class App extends Component {
 
 			      	<div className="flexVC">
 			      		<Back Fetch={this.backFetch} />
-			      		<SquareCard nN={this.state.nN} route={this.state.route} searchLength={this.state.searched.objectIDs.length} theState={this.state.test} />
+			      		<SquareCard 
+			      		nN={this.state.nN} 
+			      		route={this.state.route} 
+			      		searchLength={this.state.searched.objectIDs.length} 
+			      		theState={this.state.test} />
 			      		<Next Fetch={this.singleFetch} />
 			    	</div>
 		    	</div>   				
