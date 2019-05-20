@@ -1,3 +1,4 @@
+/*font size set at 10, everything else based off that via rem*/
 html {
 	background-color: white;
 	color: black;
@@ -15,16 +16,34 @@ input {
 	padding: .5rem;
 	font-size: 1.5rem;
 	outline-style: none;
-	border: 0px;
+	border: 0rem;
 	font-family: 'Roboto', sans-serif;
 	width: 25rem;
 	text-align: center;
 }
 
+/*placeholder text disappears when clicked on*/
 input:focus::-webkit-input-placeholder { color:transparent; }
 input:focus:-moz-placeholder { color:transparent; } /* FF 4-18 */
 input:focus::-moz-placeholder { color:transparent; } /* FF 19+ */
 input:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
+
+.artImg{
+	border-radius: .4rem;
+	height: 46.5rem;
+	width: auto;
+}
+
+/*shrinking artwork and input for mobile devices*/
+@media (max-width: 760px) {
+	.artImg {
+		width: 45rem;
+		height: auto;
+	}
+	input{
+		width: 15rem;
+	}
+}
 
 a {
 	text-decoration: underline;
@@ -43,19 +62,19 @@ a:hover {
 .white {
 	background-color: white;
 	width: 100%;
-	height: 900px;
+	height: 90rem;
 }
 
 .lightGrey{
 	background-color: rgba(121, 122, 124, .05);
 	width: 100%;
-	height: 900px;
+	height: 90rem;
 }
 
 .grey {
 	background-color: rgba(121, 122, 124, .1);
 	width: 100%;
-	height: 900px;
+	height: 90rem;
 }
 
 .flexVC {
