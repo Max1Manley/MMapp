@@ -77,8 +77,6 @@ a:hover {
 	height: 90rem;
 }
 
-.moreTopMargin {}
-
 /*shrinking artwork and input for mobile devices*/
 @media (max-width: 760px) {
 	.artImg {
@@ -102,9 +100,6 @@ a:hover {
 	.grey {
 		height: 60rem;
 	}
-	.moreTopMargin{
-		margin-top: 5rem;
-	}
 	
 }
 
@@ -112,6 +107,16 @@ a:hover {
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
+}
+
+.topBar {
+	position: sticky;
+	top: 1rem;
+	z-index: 1;
+}
+
+.moreTopMargin {
+	margin-top: 5rem;
 }
 
 .air {

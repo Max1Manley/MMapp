@@ -3,7 +3,7 @@ import React from 'react';
 const NavBarSearched = ({ onSearchChange, onClickHome, onClickAbout }) => {
 
 	return(
-		<div className="topMargin">
+		<div className="topMargin topBar">
 			
 			<font className="pointer leftPadding" onClick={onClickHome}>
 				Home
