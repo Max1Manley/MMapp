@@ -1,5 +1,4 @@
 import React from 'react';
-import './SquareCard.css';
 
 const SquareCard = ({ theState, nN, searchLength, route}) => {
 

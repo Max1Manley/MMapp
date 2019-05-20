@@ -132,6 +132,7 @@ class App extends Component {
 			      	<div className="flexVC">
 			      		<Back Fetch={this.backFetch} />
 			      		<SquareCard 
+			      		className="topMargin"
 			      		nN={this.state.nN} 
 			      		route={this.state.route} 
 			      		searchLength={this.state.searched.objectIDs.length} 
