@@ -68,14 +68,20 @@ class App extends Component {
 				this.setState({
 					searched: art,	
 				})
-				fetch(`https://collectionapi.metmuseum.org/public/collection/v1/objects/${this.state.searched.objectIDs[0]}`)
-				.then(response => response.json())
-				.then(art => {
-					this.setState({
-						test: art,
-						route: "displaySearch",
-					})
-				})
+				if (this.state.searched.objectIDs) {
+					fetch(`https://collectionapi.metmuseum.org/public/collection/v1/objects/${this.state.searched.objectIDs[0]}`)
+					.then(response => response.json())
+					.then(art => {
+						this.setState({
+							test: art,
+							route: "displaySearch",
+						})
+					})					
+				} else {
+					alert("No Matching Results");
+					this.setState({ route: "" });
+				}
+
 			})					
 		}
 	}
@@ -120,7 +126,7 @@ class App extends Component {
 
 	render() {
 		//renders search result
-		if (this.state.randomsLoaded >= 3 && this.state.route === "displaySearch") {
+		if (this.state.randomsLoaded >= 3 && this.state.route === "displaySearch" &&  this.state.searched.objectIDs) {
 			return (
 		    	<div className="App">
 
