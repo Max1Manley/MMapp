@@ -54,7 +54,7 @@ ul {
 		width: 15rem;
 	}
 	ul {
-		width: 25rem;
+		width: 23rem;
 	}
 }
 
@@ -103,6 +103,10 @@ a:hover {
 
 .leftPadding {
 	padding-left: 2rem;
+}
+
+.moreTopMargin {
+	margin-top: 4rem;
 }
 
 .topMargin {
