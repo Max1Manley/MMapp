@@ -129,10 +129,9 @@ class App extends Component {
 		    			onClickHome={this.onClickHome}
 		    			onSearchChange={this.onSearchChange} />
 
-			      	<div className="flexVC">
+			      	<div className="flexVC moreTopMargin">
 			      		<Back Fetch={this.backFetch} />
 			      		<SquareCard 
-			      		className="moreTopMargin"
 			      		nN={this.state.nN} 
 			      		route={this.state.route} 
 			      		searchLength={this.state.searched.objectIDs.length} 
@@ -165,13 +164,22 @@ class App extends Component {
 	    			onSearchChange={this.onSearchChange} />
 
 			      	<div className="white flexVC">
-			      		<SquareCard nN={this.state.nN} route={this.state.route}  theState={this.state.random0} />
+			      		<SquareCard 
+			      		nN={this.state.nN} 
+			      		route={this.state.route}  
+			      		theState={this.state.random0} />
 			    	</div>
 			    	<div className="lightGrey flexVC">
-			    		<SquareCard nN={this.state.nN} route={this.state.route} theState={this.state.random1} />
+			    		<SquareCard 
+			    		nN={this.state.nN} 
+			    		route={this.state.route} 
+			    		theState={this.state.random1} />
 			    	</div>
 			    	<div className="grey flexVC">
-			    		<SquareCard nN={this.state.nN} route={this.state.route} theState={this.state.random2} />
+			    		<SquareCard 
+			    		nN={this.state.nN} 
+			    		route={this.state.route} 
+			    		theState={this.state.random2} />
 		    		</div>
 		    	</div>    			
     		)		
