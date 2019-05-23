@@ -78,7 +78,7 @@ class App extends Component {
 						})
 					})					
 				} else {
-					alert("No Matching Results");
+					alert("No Results");
 					this.setState({ route: "" });
 				}
 

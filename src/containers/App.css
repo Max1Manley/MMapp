@@ -77,7 +77,7 @@ a:hover {
 	height: 90rem;
 }
 
-/*shrinking artwork and input for mobile devices*/
+/*shrinking artwork, home sections and input for mobile devices*/
 @media (max-width: 760px) {
 	.artImg {
 		width: 25rem;

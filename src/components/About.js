@@ -8,7 +8,7 @@ const About = () => {
 			<br/>
 
 			<p>
-			The three images shown on the home page are randomly chosen from a selected list of 2896 different works of art.
+			The three images shown on the home page are randomly chosen from a selected list of 2720 different works of art.
 			<br/>
 			Searching will provide all works of art from the Met that contain the search query in their data.
 			<br/>
