@@ -77,32 +77,6 @@ a:hover {
 	height: 90rem;
 }
 
-/*shrinking artwork, home sections and input for mobile devices*/
-@media (max-width: 760px) {
-	.artImg {
-		width: 25rem;
-		height: auto;
-	}
-	input{
-		width: 15rem;
-	}
-	ul {
-		width: 23rem;
-	}
-	.white {
-		height: 60rem;
-	}
-
-	.lightGrey{
-		height: 60rem;
-	}
-
-	.grey {
-		height: 60rem;
-	}
-	
-}
-
 .flexVC {
 	display: flex;
 	justify-content: space-around;
@@ -162,4 +136,29 @@ a:hover {
 	transition: transform .4s;
 	transform: scale(1.2);
 	cursor: pointer;
+}
+
+/*shrinking artwork, home sections and input for mobile devices*/
+@media (max-width: 760px) {
+	.artImg {
+		width: 25rem;
+		height: auto;
+	}
+	input{
+		width: 15rem;
+	}
+	ul {
+		width: 23rem;
+	}
+	.white {
+		height: 75rem;
+	}
+
+	.lightGrey{
+		height: 75rem;
+	}
+
+	.grey {
+		height: 75rem;
+	}
 }
