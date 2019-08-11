@@ -419,6 +419,7 @@ class App extends Component {
 }
 
 //TODO
+//add confirm password field to register
 //get rid of console.logs
 //have pressing enter button log you in/register you
 //reuse squarecard inside of favorites
