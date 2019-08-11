@@ -1,4 +1,6 @@
-/*font size set at 10, everything else based off that via rem*/
+/*metropolitan red #e4002b
+
+font size set at 10, everything else based off that via rem*/
 html {
 	background-color: white;
 	color: black;
@@ -13,12 +15,13 @@ body{
 input {
 	border-radius: .4rem;
 	background-color: rgba(121, 122, 124, .1);
-	padding: .5rem;
+	padding: 0rem;
 	font-size: 1.5rem;
 	outline-style: none;
 	border: 0rem;
 	font-family: 'Roboto', sans-serif;
 	width: 25rem;
+	height: 4rem;
 	text-align: center;
 }
 
@@ -35,7 +38,6 @@ ul {
   background-color: white;
   padding: 1rem;
   width: 32.5rem;
-  vertical-align: center;
 }
 
 .artImg{
@@ -43,7 +45,6 @@ ul {
 	height: 46.5rem;
 	width: auto;
 }
-
 
 a {
 	text-decoration: underline;
@@ -55,8 +56,57 @@ a:hover {
 	color: rgba(121, 122, 124, 1);
 }
 
+/*used on login and register pages*/
+article {
+	width: 66%;
+}
+
+article input {
+	width: 66%;
+}
+
 .about {
 	margin-top: 7.25rem;
+}
+
+/*top left drop down menu*/
+.menu {
+	position: absolute;
+	width: 17.5rem;
+	margin: 0rem;
+	padding: 0rem;
+	list-style: none;
+	color: rgb(121, 122, 124);
+	background-color: lightgrey;
+	font-size: 1.5rem;
+}
+
+.menu li {
+	float: left;
+	width: 17.5rem;
+	height: 4rem;
+	background-color: transparent;
+	line-height: 4rem;
+	text-align: center;
+	border-radius: .4rem;
+}
+
+.menu li:hover {
+	background-color: darkgrey;
+}
+
+.menu li ul li {
+	display: none;
+	color: black;
+}
+
+.menu li:hover ul li {
+	display: block;
+}
+
+.menuPointer:hover {
+	cursor: pointer;
+	color: black;
 }
 
 .white {
@@ -76,33 +126,35 @@ a:hover {
 	width: 100%;
 	height: 90rem;
 }
-
+ /*vc stands for vertical center*/
 .flexVC {
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
 }
 
+/*sticky top bar that the menu and searchbar are inside of*/
 .topBar {
 	position: sticky;
-	top: 1rem;
+	top: 0rem;
 	z-index: 1;
-	padding-top: 1rem;
+	height: 4rem;
+	background-color: lightgrey;
 }
 
 .moreTopMargin {
 	margin-top: 5rem;
 }
 
+/*used for top right search bar*/
 .air {
-	position: absolute; 
-	right: 2rem;
+	position: absolute;
+	right: 0rem;
 }
 
 .leftPadding {
 	padding-left: 2rem;
 }
-
 
 .topMargin {
 	margin-top: 1rem;
@@ -120,12 +172,22 @@ a:hover {
 	text-align: center;
 }
 
+.itemCenter {
+	margin-left: auto;
+	margin-right: auto;
+}
+
 .container {
   background-color: transparent;
 }
 
+/*used on images and cards*/
 .shadow {
   box-shadow: 3px 5px 5px #888888;
+}
+
+.shorterWidth {
+	width: 18.4rem;
 }
 
 .pointer:hover {
@@ -151,6 +213,15 @@ a:hover {
 	ul {
 		width: 23rem;
 	}
+
+	article {
+		width: 80%;
+	}
+
+	article input {
+		width: 80%;
+	}
+
 	.white {
 		height: 75rem;
 	}

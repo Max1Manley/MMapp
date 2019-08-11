@@ -1,6 +1,6 @@
 import React from 'react';
 
-const SquareCard = ({ theState, nN, searchLength, route}) => {
+const SquareCard = ({ theState, nN, searchLength, route, addFavorite }) => {
 
 	//checking if information is available, if true then it is displayed
 	let adn = "Unknown Artist";
@@ -15,8 +15,10 @@ const SquareCard = ({ theState, nN, searchLength, route}) => {
 	let searchTotal = "";	
 	if (route === "displaySearch") { searchTotal = `${nN+1} of ${searchLength}` };
 
+	console.log(theState);
+
 	return(
-		<div className="container">		
+		<div className="container center">		
 			<div className="center">
 				{searchTotal}
 			</div>
@@ -26,7 +28,8 @@ const SquareCard = ({ theState, nN, searchLength, route}) => {
 				alt="Not Public Domain"
 				src={theState.primaryImageSmall} />
 			</a>
-			<ul className="shadow">
+			<p className="pointer itemCenter" onClick={() => addFavorite(theState.objectID)}> Add To Favorites </p>
+			<ul className="shadow itemCenter">
 				<li><strong>{adn} </strong>{abd}</li>
 				<li><strong className="ital">{tst}</strong>{tsod}</li>
 				<li className="smalltxt">{theState.medium}</li>
