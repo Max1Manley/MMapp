@@ -4,7 +4,7 @@ const About = () => {
 
 	return(
 		<div className="center about">
-			This App was built using <a href="https://reactjs.org/" target="_blank" rel="noopener noreferrer">React</a>, <a href="https://www.npmjs.com/package/bcrypt" target="_blank" rel="noopener noreferrer">bcryptJS</a>, <a href="https://www.npmjs.com/package/knex" target="_blank" rel="noopener noreferrer">knexJS</a>, <a href ="https://www.postgresql.org/" target="_blank" rel="noopener noreferrer">postgreSQL</a> and <a href ="https://metmuseum.github.io/" target="_blank" rel="noopener noreferrer">The Metropolitan Museum of Art Collection API.</a>
+			This App was built using <a href="https://reactjs.org/" target="_blank" rel="noopener noreferrer">React</a>, <a href="https://www.npmjs.com/package/express" target="_blank" rel="noopener noreferrer">expressJS</a>, <a href="https://www.npmjs.com/package/bcrypt" target="_blank" rel="noopener noreferrer">bcryptJS</a>, <a href="https://www.npmjs.com/package/knex" target="_blank" rel="noopener noreferrer">knexJS</a>, <a href ="https://www.postgresql.org/" target="_blank" rel="noopener noreferrer">postgreSQL</a> and <a href ="https://metmuseum.github.io/" target="_blank" rel="noopener noreferrer">The Metropolitan Museum of Art Collection API.</a>
 			<br/>
 
 			<p>
