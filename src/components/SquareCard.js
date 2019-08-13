@@ -15,8 +15,6 @@ const SquareCard = ({ theState, nN, searchLength, route, addFavorite }) => {
 	let searchTotal = "";	
 	if (route === "displaySearch") { searchTotal = `${nN+1} of ${searchLength}` };
 
-	console.log(theState);
-
 	return(
 		<div className="container center">		
 			<div className="center">

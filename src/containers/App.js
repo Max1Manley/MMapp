@@ -93,6 +93,7 @@ class App extends Component {
 					fetch(`https://collectionapi.metmuseum.org/public/collection/v1/objects/${this.state.searched.objectIDs[0]}`)
 					.then(response => response.json())
 					.then(art => {
+						window.scrollTo(0, 0);
 						this.setState({
 							test: art,
 							route: "displaySearch",
@@ -174,13 +175,11 @@ class App extends Component {
 					.then (response => response.json())
 					.then (data => {
 						this.setState({ favsData: this.state.favsData.concat(data) });
-						console.log('onSubmitLogIn stolen and put in onClickFavorites',this.state.favsData);
 					});
 				}				
 			}
 		})
 		.then(() => {
-			console.log('onClickFavorites 2', this.state.favsData);
 			this.setState({ route: "Favorites"});
 			window.scrollTo(0, 0);
 		})
@@ -188,7 +187,6 @@ class App extends Component {
 
 	//sends information to server/database and recieves response with the user data from the database for use in this.state.userData
 	onSubmitRegister = () => {
-		console.log('onSubmitRegister');
 		fetch('https://mmexpressjstest.herokuapp.com/register', {
 			method: 'post',
 			headers: {'Content-Type': 'application/json'},
@@ -201,7 +199,6 @@ class App extends Component {
 		.then(res => res.json())
 		.then(data => {
 			if (data.id){
-				console.log('onSubmitRegister 2', data);
 				this.setState({ userData: data });
 				this.setState({ route: "Home" });
 			} else { alert('Register Failed') }
@@ -234,7 +231,6 @@ class App extends Component {
 					.then (response => response.json())
 					.then (art => {
 						this.setState({ favsData: this.state.favsData.concat(art) });
-						console.log('onSubmitLogIn',this.state.favsData);
 					});
 				}				
 			} 
@@ -258,7 +254,6 @@ class App extends Component {
 
 	//sends request to add a favorite to the database
 	addFavorite = (artId) => {
-		console.log('addFavorite', artId);
 		fetch('https://mmexpressjstest.herokuapp.com/favorites', {
 			method: 'put',
 			headers: {'Content-Type': 'application/json'},
@@ -278,7 +273,6 @@ class App extends Component {
 
 	//sends request to remove a favorite from the database
 	removeFavorite = (artId) => {
-		console.log('removeFavorite', artId);
 		fetch('https://mmexpressjstest.herokuapp.com/favorites', {
 			method: 'delete',
 			headers: {'Content-Type': 'application/json'},
@@ -420,7 +414,7 @@ class App extends Component {
 
 //TODO
 //add confirm password field to register
-//get rid of console.logs
+//fix search arrow positions
 //have pressing enter button log you in/register you
 //reuse squarecard inside of favorites
 //create option for guest/temporary user?

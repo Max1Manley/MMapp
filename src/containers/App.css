@@ -44,6 +44,7 @@ ul {
 	border-radius: .4rem;
 	height: 46.5rem;
 	width: auto;
+	max-width: 125rem;
 }
 
 a {
@@ -206,6 +207,7 @@ article input {
 	.artImg {
 		width: 25rem;
 		height: auto;
+		max-height: 55rem;
 	}
 	input{
 		width: 15rem;
