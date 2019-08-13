@@ -409,13 +409,13 @@ class App extends Component {
     		return <div className="flexVC">Loading...</div>
     	}
 	}	
-	//componentDidMount(){}		
 }
 
 //TODO
 //add confirm password field to register
 //fix search arrow positions
 //have pressing enter button log you in/register you
+//change 'add/remove to favorites' to an icon
 //reuse squarecard inside of favorites
 //create option for guest/temporary user?
 
