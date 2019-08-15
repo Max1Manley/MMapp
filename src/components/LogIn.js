@@ -1,6 +1,6 @@
 import React from 'react';
 
-const LogIn = ({ onSubmitLogIn, emailChange, passwordChange, onClickRegister }) => {
+const LogIn = ({ onSubmitLogIn, emailChange, passwordChange, onClickRegister, onSubmitLogInEnter }) => {
 
 	return(
 		<div className="flexVC center moreTopMargin"> 
@@ -27,19 +27,21 @@ const LogIn = ({ onSubmitLogIn, emailChange, passwordChange, onClickRegister }) 
 					        name="password"  
 					        id="password" 
 					        onChange={passwordChange}
+					        onKeyPress={onSubmitLogInEnter}
 				        />
 				      </div>
 				    </fieldset>
 				    <div>
 				    <br/>
 				      <input 
+				      className="button pointer"
 				      	onClick={onSubmitLogIn}
 					    type="submit" 
-					    value="Click to Sign in" 
+					    value="Sign in" 
 				      />
 				    </div>
 				    <div >
-				      <p onClick={onClickRegister}>Register</p>
+				      <p className="pointer" onClick={onClickRegister}>Go To Register</p>
 				    </div>
 				  </div>
 				</main>

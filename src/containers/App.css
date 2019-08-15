@@ -66,6 +66,10 @@ article input {
 	width: 66%;
 }
 
+.button {
+	width: 25%;
+}
+
 .about {
 	margin-top: 7.25rem;
 }
@@ -222,6 +226,10 @@ article input {
 
 	article input {
 		width: 80%;
+	}
+
+	.button{
+		width: 40%;
 	}
 
 	.white {

@@ -204,7 +204,13 @@ class App extends Component {
 			} else { alert('Register Failed') }
 		})
 		.catch(err => console.log(err));
-	}		
+	}	
+
+	onSubmitRegisterEnter = (event) => {
+		if (event.key === 'Enter'){
+			this.onSubmitRegister();
+		}
+	}	
 	
 	//logs in and manages this.state.favsData
 	onSubmitLogIn = () => {
@@ -238,6 +244,12 @@ class App extends Component {
 		})
 		.catch(err => console.log(err));
 	}	
+
+	onSubmitLogInEnter = (event) => {
+		if (event.key === 'Enter'){
+			this.onSubmitLogIn();
+		}
+	}
 
 	//series of functions that keep track of login and register forms
 	nameChange = (event) => {
@@ -298,6 +310,7 @@ class App extends Component {
 				emailChange={this.emailChange} 
 				passwordChange={this.passwordChange}
 				onClickRegister={this.onClickRegister}
+				onSubmitLogInEnter={this.onSubmitLogInEnter}
 				/>
 			)
 		} else if (this.state.route === "Register") {
@@ -308,6 +321,7 @@ class App extends Component {
 				passwordChange={this.passwordChange} 
 				nameChange={this.nameChange} 
 				onClickLogIn={this.onClickLogIn}
+				onSubmitRegisterEnter={this.onSubmitRegisterEnter}
 				/>
 			)
 		} else if (this.state.randomsLoaded >= 3 && this.state.route === "displaySearch" &&  this.state.searched.objectIDs) {
