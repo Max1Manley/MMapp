@@ -428,12 +428,13 @@ class App extends Component {
 //TODO
 //add confirm password field to register
 //fix search arrow positions
-//have pressing enter button log you in/register you
 //change 'add/remove to favorites' to an icon
 //reuse squarecard inside of favorites
 //create option for guest/temporary user?
 
-//BUGS
+//BUGS...features
 //clicking through searched items quickly can cause nN to be off
+//neither front end nor back end check if email is email format
+//can add same artwork to favorites multiple times? clicking delete from favorites on a multiple deletes all instances of it.
 
 export default App;
