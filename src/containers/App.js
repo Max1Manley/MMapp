@@ -44,10 +44,6 @@ class App extends Component {
 		super();
 		this.state = initialState;
 	}
-
-	componentWillMount() {	
-		this.getRandoms();
-	}
 	
 	//fetching random works of art from public domain array
 	getRandoms = () => {
@@ -422,13 +418,14 @@ class App extends Component {
 		} else {
     		return <div className="flexVC">Loading...</div>
     	}
-	}	
+	}		    
+	componentDidMount() { this.getRandoms() }
 }
 
 //TODO
 //add confirm password field to register
 //fix search arrow positions
-//change 'add/remove to favorites' to an icon
+//change 'add/remove to favorites' to an icon?
 //reuse squarecard inside of favorites
 //create option for guest/temporary user?
 
