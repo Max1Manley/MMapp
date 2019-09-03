@@ -45,6 +45,8 @@ class App extends Component {
 		this.state = initialState;
 	}
 	
+	componentWillMount(){ this.getRandoms() }
+
 	//fetching random works of art from public domain array
 	getRandoms = () => {
 		fetch(`https://collectionapi.metmuseum.org/public/collection/v1/objects/${publicDomain[Math.floor(Math.random()*publicDomain.length)]}`)
@@ -419,7 +421,7 @@ class App extends Component {
     		return <div className="flexVC">Loading...</div>
     	}
 	}		    
-	componentDidMount() { this.getRandoms() }
+	componentDidMount(){} 
 }
 
 //TODO
@@ -427,6 +429,7 @@ class App extends Component {
 //fix search arrow positions
 //change 'add/remove to favorites' to an icon?
 //reuse squarecard inside of favorites
+//add 'new randoms' option to homepage
 //create option for guest/temporary user?
 
 //BUGS...features
