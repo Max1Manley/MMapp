@@ -11,8 +11,6 @@ import Back from '../components/Back';
 import About from '../components/About';
 import './App.css';
 
-//keeps track of where you are in the this.state.searched array
-var nN = 0;
 //initial state to reset state when signing out
 const initialState = {
 	//makes sure homepage artwork is loaded before rendering
@@ -47,6 +45,8 @@ class App extends Component {
 	
 	componentWillMount(){ this.getRandoms() }
 
+
+
 	//fetching random works of art from public domain array
 	getRandoms = () => {
 		fetch(`https://collectionapi.metmuseum.org/public/collection/v1/objects/${publicDomain[Math.floor(Math.random()*publicDomain.length)]}`)
@@ -80,7 +80,6 @@ class App extends Component {
 	onSearchChange = (event) => {
 		if (event.key === 'Enter'){
 			this.setState({	nN: 0, });
-			nN = 0;
 			fetch(`https://collectionapi.metmuseum.org/public/collection/v1/search?q=${event.target.value}`)
 			.then (response => response.json())
 			.then (art => {
@@ -108,30 +107,28 @@ class App extends Component {
 
 	//fetches next item in the this.state.searched.objectIDs array and saves it in this.state.test, also increments nN
 	singleFetch = () =>{
-		if (nN < this.state.searched.objectIDs.length - 1){
-			fetch(`https://collectionapi.metmuseum.org/public/collection/v1/objects/${this.state.searched.objectIDs[nN+1]}`)
+		if (this.state.nN < this.state.searched.objectIDs.length - 1){
+			fetch(`https://collectionapi.metmuseum.org/public/collection/v1/objects/${this.state.searched.objectIDs[this.state.nN+1]}`)
 			.then(response => response.json())
 			.then(art => {
 				this.setState({
 					test: art,
 					nN: this.state.nN + 1,
 				})
-				nN++;
 			})			
 		}
 	}
 
 	//fetches previous item in the this.state.searched.objectIDs array and saves it in this.state.test, also decrements nN
 	backFetch = () =>{
-		if(nN > 0){
-			fetch(`https://collectionapi.metmuseum.org/public/collection/v1/objects/${this.state.searched.objectIDs[nN-1]}`)
+		if(this.state.nN > 0){
+			fetch(`https://collectionapi.metmuseum.org/public/collection/v1/objects/${this.state.searched.objectIDs[this.state.nN-1]}`)
 			.then(response => response.json())
 			.then(art => {
 				this.setState({
 					test: art,
 					nN: this.state.nN - 1,
 				})
-				nN--;
 			})			
 		}
 	}
@@ -376,7 +373,6 @@ class App extends Component {
 			      	<div className="white flexVC">
 			      		<SquareCard 
 			      		addFavorite={this.addFavorite}
-			      		nN={this.state.nN} 
 			      		route={this.state.route}  
 			      		theState={this.state.random0} 
 			      		/>
@@ -384,7 +380,6 @@ class App extends Component {
 			    	<div className="lightGrey flexVC">
 			    		<SquareCard 
 			      		addFavorite={this.addFavorite}
-			    		nN={this.state.nN} 
 			    		route={this.state.route} 
 			    		theState={this.state.random1} 
 			    		/>
@@ -392,7 +387,6 @@ class App extends Component {
 			    	<div className="grey flexVC">
 			    		<SquareCard 
 			      		addFavorite={this.addFavorite}
-			    		nN={this.state.nN} 
 			    		route={this.state.route} 
 			    		theState={this.state.random2} 
 			    		/>
@@ -431,8 +425,9 @@ class App extends Component {
 //reuse squarecard inside of favorites
 //add 'new randoms' option to homepage
 //create option for guest/temporary user?
+//remove global variables
 
-//BUGS...features
+//BUGS
 //clicking through searched items quickly can cause nN to be off
 //neither front end nor back end check if email is email format
 //can add same artwork to favorites multiple times? clicking delete from favorites on a multiple deletes all instances of it.
