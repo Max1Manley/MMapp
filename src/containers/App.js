@@ -194,8 +194,10 @@ class App extends Component {
 		.then(res => res.json())
 		.then(data => {
 			if (data.id){
-				this.setState({ userData: data });
-				this.setState({ route: "Home" });
+				this.setState({ 
+					userData: data,
+					route: "Home",
+				});
 			} else { alert('Register Failed') }
 		})
 		.catch(err => console.log(err));
@@ -425,7 +427,7 @@ class App extends Component {
 //reuse squarecard inside of favorites
 //add 'new randoms' option to homepage
 //create option for guest/temporary user?
-//remove global variables
+//change add to/remove from tags to span
 
 //BUGS
 //clicking through searched items quickly can cause nN to be off
