@@ -25,7 +25,8 @@ const Favorites = ({ favsData, removeFavorite }) => {
 								alt="Not Public Domain"
 								src={favsData[i].primaryImageSmall} />
 							</a>
-							<p className="pointer itemCenter shorterWidth" onClick={() => removeFavorite(favsData[i].objectID)}> Remove From Favorites </p>
+							<br /><br />
+							<span className="pointer itemCenter shorterWidth" onClick={() => removeFavorite(favsData[i].objectID)}> Remove From Favorites </span>
 							<ul className="shadow itemCenter">
 								<li><strong>{adn} </strong>{abd}</li>
 								<li><strong className="ital">{tst}</strong>{tsod}</li>

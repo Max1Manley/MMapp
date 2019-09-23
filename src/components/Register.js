@@ -51,8 +51,9 @@ const Register = ({ onSubmitRegister, nameChange, emailChange, passwordChange, o
 					    value="Register" 
 				      	/>
 				    </div>
-				    <div >
-				      <p className="pointer" onClick={onClickLogIn} >Go To Sign In</p>
+				    <div>
+						<br />
+				      <span className="pointer" onClick={onClickLogIn} >Go To Sign In</span>
 				    </div>
 				  </div>
 				</main>

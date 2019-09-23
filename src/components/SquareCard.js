@@ -26,7 +26,8 @@ const SquareCard = ({ theState, nN, searchLength, route, addFavorite }) => {
 				alt="Not Public Domain"
 				src={theState.primaryImageSmall} />
 			</a>
-			<p className="pointer itemCenter" onClick={() => addFavorite(theState.objectID)}> Add To Favorites </p>
+			<br /><br />
+			<span className="pointer itemCenter" onClick={() => addFavorite(theState.objectID)}> Add To Favorites </span>
 			<ul className="shadow itemCenter">
 				<li><strong>{adn} </strong>{abd}</li>
 				<li><strong className="ital">{tst}</strong>{tsod}</li>
