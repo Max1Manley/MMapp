@@ -1,4 +1,4 @@
-//Max Manley 2019
+//Max Manley 2020
 import React, { Component } from 'react';
 import NavBarSearched from '../components/NavBarSearched';
 import publicDomain from './publicDomain';
